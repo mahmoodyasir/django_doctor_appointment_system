@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1>Doctor Info ! </h1>
+        <table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ info.name }}</td>
+            <td>{{ info.email }}</td>
+            <td>{{ info.phone }}</td>
+            <td>{{ info.age }}</td>
+            <td>{{ info.address }}</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</div>
+
+{% endblock %}

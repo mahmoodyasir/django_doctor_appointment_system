@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+    <div class="container">
+    <div class="row">
+        <h1>Create Appointment ! </h1>
+
+        <form method="post" class="post-form" action="{% url 'doctor_appointment_create' request.user.doctorinfo.id %}">
+        {% csrf_token %}
+          <div class="form-row">
+            <div class="form-group col-md-7">
+                <br>
+              <label for="inputDate">Date</label>
+              <input type="date" class="form-control" name="date_created" id="inputDate" >
+            </div>
+
+
+            <div class="form-group col-md-6">
+              <label for="inputStart">Start Time</label>
+              <input type="time" class="form-control" name="start_time" id="inputStart" >
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEnd">End Time</label>
+            <input type="time" class="form-control" name="end_time" id="inputEnd" >
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputTotal">Total Patient</label>
+              <input type="number" class="form-control" name="total_patient" id="inputTotal" >
+            </div>
+
+
+          <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Create Appointment</button>
+          </div>
+          </div>
+
+    </form>
+
+    </div>
+</div>
+{% endblock %}

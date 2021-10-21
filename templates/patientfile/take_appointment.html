@@ -1,0 +1,31 @@
+{% extends "patientfile/patient_main.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1>Take Appointment ! </h1>
+        <table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Doctor Name</th>
+            <th>Speciality</th>
+            <th>Phone No</th>
+            <th>Appointment</th>
+        </tr>
+    </thead>
+     {% for id in app_info %}
+    <tbody>
+        <tr>
+            <td>{{ id.name }}</td>
+            <td>{{ id.user.doctorspec.title }}</td>
+            <td>{{ id.phone }}</td>
+            <td><a href="{% url 'patient_appointment' id.id %}" class="btn btn-primary">Proceed To Appointment</a></td>
+        </tr>
+    </tbody>
+     {% endfor %}
+</table>
+    </div>
+</div>
+
+{% endblock %}
