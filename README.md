@@ -13,5 +13,5 @@
 
 # Patient can register an account to the system and after login he can update his personal information.
 # Patient can see doctors list and their speciality with other things and can Book an appointment as per his situation.
-# If an appointment section is full a patient can not book that appointment.
+# If an appointment section is full, then a patient can not book that appointment.
 # Patient can also see their payment status.
